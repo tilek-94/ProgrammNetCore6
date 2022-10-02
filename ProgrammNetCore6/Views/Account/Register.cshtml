@@ -1,0 +1,71 @@
+﻿@model RegistrDto
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+  <div class="rightColumn">
+     
+      <!-- Category block -->
+      <div class="category">
+        <div class="breadcrumbs">
+          <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Регистрация</a></li>
+          </ul>
+        </div>
+        <h1 class="catalogHeaderText">Регистрация</h1>
+        <div class="registration"><br>
+
+          <form asp-action="Register" class="formControl" >
+               <span asp-validation-summary="ModelOnly" style="color:red">
+                  </span>
+              <div>
+                <p>Ф.И.О *</p>
+                <input type="text" asp-for="FullName" >
+                <span asp-validation-for="FullName" style="color:red"></span>
+              </div>
+              <div>
+                <p>Дата рождения *</p>
+                <input type="text" asp-for="DateOfBirth" >
+                 <span asp-validation-for="FullName" style="color:red"></span>
+              </div>
+              <div>
+                <p>Номер телефона *</p>
+                <input type="text" asp-for="PhoneNumber" >
+                 <span asp-validation-for="PhoneNumber" style="color:red"></span>
+              </div>
+               <div>
+                <p>Адрес *</p>
+                <input type="text" asp-for="Address" >
+                 <span asp-validation-for="Address" style="color:red"></span>
+              </div>
+              
+              <div>
+                <p>E-mail *</p>
+                <input type="email" asp-for="EmailAddress" >
+                <span asp-validation-for="EmailAddress" style="color:red"></span>
+                <span  style="color:red">@TempData["Error"]</span>
+              </div>
+              <div>
+                <p>Пароль *</p>
+                <input asp-for="Password" type="password" >
+                 <span asp-validation-for="Password" style="color:red"></span>
+              </div>
+              <div>
+                <p>подтверждение пароля *</p>
+                <input asp-for="ConfirmPassword" type="password" >
+                  <span asp-validation-for="ConfirmPassword" style="color:red"></span>
+              </div>
+              <div class="checkBlock">
+                <input type="checkbox" class="check">
+                <span>Я согласен на <a href="#">обработку персональных данных.</a>  *</span>
+              </div>
+              <button class="btnFormSubmitReg">Регистрация</button>
+          </form>
+
+        </div>
+      </div>
+
+
+
+    </div>

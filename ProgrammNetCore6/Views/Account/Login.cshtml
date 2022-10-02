@@ -1,0 +1,39 @@
+﻿@model LoginDto
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+ <div class="category">
+        <div class="breadcrumbs">
+          <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Авторизация</a></li>
+          </ul>
+        </div>
+        <h1 class="catalogHeaderText">Авторизация</h1>
+        <div class="registration"><br>
+
+          <form class="formControl" asp-action="Login">
+
+             <div>
+                 <p style="color:red;"> 
+                    @TempData["Error"]</p>
+                
+                <p>E-mail *</p>
+                <input asp-for="EmailAddress" />
+                <span asp-validation-for="EmailAddress" style="color:red;"></span>
+              </div>
+              <div>
+                <p>Пароль *</p>
+               <input asp-for="Password" />
+                <span asp-validation-for="Password" style="color:red;" ></span>
+              </div>
+
+              <a class="btnFormCancel">Отмена</a>
+                <button class="btnFormSubmitReg" type="submit"  >Войти</button>
+          </form>
+
+        </div>
+      </div>
+

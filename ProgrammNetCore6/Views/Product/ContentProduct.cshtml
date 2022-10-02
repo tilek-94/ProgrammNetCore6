@@ -1,0 +1,246 @@
+﻿@model Products
+@{
+    ViewData["Title"] = "ContentProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="category">
+        <div class="breadcrumbs">
+
+        </div>
+        <h1 class="productTitleInfo">@Model.Name</h1>
+        <div class="catalogContent">
+          <div class="productContentInfo">
+            <div class="fotorama" data-nav="thumbs" data-click="false" data-swipe="false" data-width="300" data-thumbwidth="50px" data-thumbheight="50px" name="navdir" data-allowfullscreen="native">
+              <img src="/Image/Product/Big/@Model.Img">
+              <img src="~/web/img/products/5dd64188c6f97cb78cf1cc6608527b3e.jpg">
+              <img src="~/web/img/products/162149794063235_full.png" alt="">
+              <img src="~/web/img/products/162149794069394_full.png" alt="">
+            </div>
+            <div class="productPropList">
+              <p class="productTitleInfo">Характеристики</p>
+              <div class="propertyProduct">
+                <div class="propertyTable">
+                  <div class="propertyName">Наши предложение</div>
+                  <div class="propertyValue">Новинки</div>
+                </div>
+                <div class="propertyTable">
+                  <div class="propertyName">Bluetooth</div>
+                  <div class="propertyValue">Да</div>
+                </div>
+                <div class="propertyTable">
+                  <div class="propertyName">Web-камера </div>
+                  <div class="propertyValue">Да</div>
+                </div>
+                <div class="propertyTable">
+                  <div class="propertyName">WIFI</div>
+                  <div class="propertyValue">Да</div>
+                </div>
+                <div class="propertyTable">
+                  <div class="propertyName">Бренд</div>
+                  <div class="propertyValue">Foxcon</div>
+                </div>
+                <div class="propertyTable">
+                  <div class="propertyName">Диагональ</div>
+                  <div class="propertyValue">14</div>
+                </div>
+                <div class="propertyTable">
+                  <div class="propertyName">Объём накопителя ГБ</div>
+                  <div class="propertyValue">500</div>
+                </div>
+                <div class="propertyTable">
+                  <div class="propertyName">Оперативной памяти, ГБ </div>
+                  <div class="propertyValue">8</div>
+                </div>
+                <div class="propertyTable">
+                  <div class="propertyName">Процессор</div>
+                  <div class="propertyValue">Intel Quad Core N3450</div>
+                </div>
+                <div class="propertyTable">
+                  <div class="propertyName">Разрешение экрана </div>
+                  <div class="propertyValue">1920 x 1080</div>
+                </div>
+                <div class="propertyTable">
+                  <div class="propertyName">Цвет </div>
+                  <div class="propertyValue">Серебристый</div>
+                </div>
+                <div class="propertyTable">
+                  <div class="propertyName">Чипсет видеоадаптера</div>
+                  <div class="propertyValue">Intel HD Graphics</div>
+                </div>
+              </div>
+            </div>
+            <div class="elementTools">
+              <span class="price measure">@Model.Price сом / шт</span>
+              <div class="addCartContainer">
+                <div class="btnAddCart"><img src="~/web/img/icons/addCart.svg"> В корзину</div>
+                <div class="cartCounter">
+                  <input type="number" value="1" maxlength="9999">
+                  <span class="catalogMinus">-</span>
+                  <span class="catalogPlus">+</span>
+                </div>
+              </div>
+              <div class="secondTool">
+                <a href="#"><img src="~/web/img/icons/fastBack.png"> Купить 1 клик</a>
+                <a><img src="~/web/img/icons/wishlist.png"> В избранное</a>
+                <a><img src="~/web/img/icons/inStock.png">В наличие</a>
+              </div>
+            </div>
+          </div>
+          <div class="deliveryInfo">
+            <b class="titleInfo">ДОСТАВКА</b>
+            <div class="deliveryType">
+              <div class="deliveryCur">
+                <div>
+                  <img src="~/web/img/icons/delCur.png">
+                  <div class="deliveryText">
+                    <p>Доставка курьером</p>
+                    <strong>100 сом</strong>
+                  </div>
+                </div>
+                <a href="#">Купить с доставкой</a>
+              </div>
+              <div class="deliverySam">
+                <div>
+                  <img src="~/web/img/icons/delSam.png">
+                  <div class="deliveryText">
+                    <p>Самовывоз</p>
+                    <strong>Бесплатно</strong>
+                  </div>
+                </div>
+                <a href="#">Купить с доставкой</a>
+              </div>
+            </div>
+          </div>
+          <div class="similer">
+            <div class="titleInfo">ПОХОЖИЕ ТОВАРЫ</div>
+            <div class="tabloids">
+              <!-- product -->
+              <div class="product_item">
+                <!-- makers -->
+                <div class="newMaker">Новинка</div>
+                <div class="product_table">
+                  <!-- prduct image -->
+                  <div class="product_image">
+                    <a href="#">
+                      <img src="~/web/img/products/aff956c73141b24223aa3768f6b2eac1.jpg">
+                    </a>
+                    <span class="getFastView">Быстрый просмотр</span>
+                  </div>
+                  <div class="product_text">
+                    <a href="#">
+                      <span class="middle">Ноутбук Notebook Foxcon Silver Intel Quad Core J4115</span>
+                    </a>
+                    <span class="price measure">30 719 сом / шт</span>
+                    <a href="#" class="aboutProductMobile">Подробнее</a>
+                  </div>
+                </div>
+                <!-- Modal for FastView -->
+                <div class="modalForProdcut">
+                  <div class="modalFastView">
+                    <div class="fastViewHeader">Быстрый просмотр <span>&times;</span></div>
+                    <div class="contentFastView">
+                      <!-- slideer product for fastview -->
+                      <div class="slideProduct">
+                        <span class="newProductMaker">Новинки</span>
+                        <div class="fotorama" data-nav="thumbs" data-click="false" data-swipe="false" data-width="300"
+                          data-thumbwidth="50px" data-thumbheight="50px" name="navdir" data-allowfullscreen="native">
+                          <img src="img/products/aff956c73141b24223aa3768f6b2eac1.jpg">
+                          <img src="img/products/5dd64188c6f97cb78cf1cc6608527b3e.jpg">
+                          <img src="img/products/162149794063235_full.png" alt="">
+                          <img src="img/products/162149794069394_full.png" alt="">
+                        </div>
+                      </div>
+                      <!-- description product -->
+                      <div class="descFastView">
+                        <div class="descFastViewHeading">
+                          <a href="#">
+                            <span class="titleProduct">Ноутбук Notebook Foxcon Silver Intel Quad Core N3450 (up to
+                              2.20Ghz), 8GB, 500GB, Intel HD Graphics, 14" IPS FULL HD (1920x1080), WiFi, BT, HD WebCam,
+                              UltraSlim, Eng-Rus (ьитые пиксели)</span>
+                          </a>
+                        </div>
+                        <div class="changeProperties">
+                          <div class="propertiesFastViewProduct">
+                            <div class="propertiesFastViewProductHeading">Характеристики</div>
+                            <div class="propertyList">
+                              <div class="propertyTable">
+                                <div class="propertyName">Наши предложение</div>
+                                <div class="propertyValue">Новинки</div>
+                              </div>
+                              <div class="propertyTable">
+                                <div class="propertyName">Bluetooth</div>
+                                <div class="propertyValue">Да</div>
+                              </div>
+                              <div class="propertyTable">
+                                <div class="propertyName">Web-камера </div>
+                                <div class="propertyValue">Да</div>
+                              </div>
+                              <div class="propertyTable">
+                                <div class="propertyName">WIFI</div>
+                                <div class="propertyValue">Да</div>
+                              </div>
+                              <div class="propertyTable">
+                                <div class="propertyName">Бренд</div>
+                                <div class="propertyValue">Foxcon</div>
+                              </div>
+                              <div class="propertyTable">
+                                <div class="propertyName">Диагональ</div>
+                                <div class="propertyValue">14</div>
+                              </div>
+                              <div class="propertyTable">
+                                <div class="propertyName">Объём накопителя ГБ</div>
+                                <div class="propertyValue">500</div>
+                              </div>
+                              <div class="propertyTable">
+                                <div class="propertyName">Оперативной памяти, ГБ </div>
+                                <div class="propertyValue">8</div>
+                              </div>
+                              <div class="propertyTable">
+                                <div class="propertyName">Процессор</div>
+                                <div class="propertyValue">Intel Quad Core N3450</div>
+                              </div>
+                              <div class="propertyTable">
+                                <div class="propertyName">Разрешение экрана </div>
+                                <div class="propertyValue">1920 x 1080</div>
+                              </div>
+                              <div class="propertyTable">
+                                <div class="propertyName">Цвет </div>
+                                <div class="propertyValue">Серебристый</div>
+                              </div>
+                              <div class="propertyTable">
+                                <div class="propertyName">Чипсет видеоадаптера</div>
+                                <div class="propertyValue">Intel HD Graphics</div>
+                              </div>
+                            </div>
+                            <a href="#" class="link_footer">Больше информации о товаре</a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- right -->
+                      <div class="infoFastView">
+                        <span class="price measure">30 719 сом / шт</span>
+                        <div class="addCartContainer">
+                          <div class="btnAddCart"><img src="~/web/img/icons/addCart.svg"> В корзину</div>
+                          <div class="cartCounter">
+                            <input type="number" value="1" maxlength="9999">
+                            <span class="catalogMinus">-</span>
+                            <span class="catalogPlus">+</span>
+                          </div>
+                        </div>
+                        <div class="secondTool">
+                          <a href="#"><img src="~/web/img/icons/fastBack.png"> Купить 1 клик</a>
+                          <a><img src="~/web/img/icons/wishlist.png"> В избранное</a>
+                          <a><img src="~/web/img/icons/inStock.png">В наличие</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="clr"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+

@@ -20,7 +20,14 @@ builder.Services.AddScoped<IOrdersService, OrdersService>();
 
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddScoped(sc => ShoppingCart.GetShoppingCart(sc));
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>(u =>
+{
+    u.Password.RequireUppercase = false;
+    u.Password.RequireLowercase = false;
+    u.Password.RequireNonAlphanumeric= false;
+    u.Password.RequireDigit = false;
+    u.Password.RequiredLength = 3;
+}).AddEntityFrameworkStores<AppDbContext>();
 builder.Services.AddMemoryCache();
 builder.Services.AddSession();
 builder.Services.AddAuthentication(options =>

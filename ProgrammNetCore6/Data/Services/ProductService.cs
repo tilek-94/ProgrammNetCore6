@@ -22,5 +22,14 @@ namespace ProgrammNetCore6.Data.Services
         {
             return await _context.Products.Where(x => x.CategoryId == id).ToListAsync();
         }
+
+        public async Task<IEnumerable<Products>> GetListProductBySerarch(string name)
+        {
+            return await _context.Products.Where(x => x.Name.Contains(name) 
+            || x.Character.Contains(name) 
+            || x.Articul.Contains(name) 
+            || x.Price.ToString().Contains(name))
+                .ToArrayAsync();
+        }
     }
 }

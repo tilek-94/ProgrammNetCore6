@@ -1,0 +1,132 @@
+﻿@model IEnumerable<Products>
+
+    @{
+        ViewData["Title"] = "Index";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    <div class="category">
+        <div class="breadcrumbs">
+
+        </div>
+
+        <div class="catalogContent">
+            <div class="catalogRen">
+                <h1 class="catalogHeaderText">Ноутбуки</h1>
+                <div class="filterProduct">
+                    <div>
+                        <span>Сортировать по:</span>
+                        <select name="filter" action="/Products/Index/5">
+                            <option value="hit">популярность</option>
+                            <option value="abc">алфавиту</option>
+                            <option value="min">уменьшению цены</option>
+                            <option value="max">увеличению цены</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="viewList">
+                    <span></span>
+                    <div class="panelClick line selected"></div>
+                    <div class="panelClick squares" id="btn_view_1"></div>
+                </div>
+            </div>
+            <div class="products catalogProducts">
+                <div class="tabloids view_list">
+                    @foreach (var item in Model)
+                    {
+                        <div class="itempro">
+                            <div class="product_item">
+                                <!-- makers -->
+                                <div class="newMaker">№@item.Articul</div>
+                                <div class="product_table">
+                                    <!-- prduct image -->
+                                    <div class="product_image">
+                                        <a asp-controller="Product" asp-action="ContentProduct" asp-route-id="@item.Id">
+                                            <img src="~/Image/Product/Smaalimg/@item.Img">
+                                        </a>
+                                        @*<span class="getFastView">Быстрый просмотр</span>*@
+                                    </div>
+                                    <div class="product_text">
+                                        <a asp-controller="Product" asp-action="ContentProduct" asp-route-id="@item.Id" class="name">
+                                            <span class="middle ">@item.Name</span>
+                                        </a>
+                                        <div class="price measure priceCart"><span>@item.Price сом / шт</span></div>
+                                        <table class="tProp"> <tr> <td>Bluetooth</td> <td>Да</td> </tr> <tr> <td>Объём оперативной памяти, ГБ</td> <td>8</td> </tr> <tr> <td>Разрешение экрана </td> <td>1366 x 768</td> </tr> </table>
+                                        <div class="addCartContainerItem">
+                                            <div class="addCartContainerItemLeft">
+                                                <div class="addCartHover">
+                                                    <img src="~/web/img/icons/addCart.svg">
+                                                    В корзину
+                                                </div>
+                                            </div>
+                                            <div class="addCartContainerItemRight">
+                                                <input type="number" value="1" maxlength="9999">
+                                                <span class="catalogMinus">-</span>
+                                                <span class="catalogPlus">+</span>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="aboutProductMobile">Подробнее</a>
+                                    </div>
+                                    <div class="infoFastView" style="min-width:200px;">
+                                        <span class="price measure">@item.Price сом / шт</span>
+                                        <div class="addCartContainer">
+                                            <a class="btnAddCart" 
+                                                onclick="text_out(@item.Id)" >
+                                                <img src="~/web/img/icons/addCart.svg"> В корзину
+                                            </a>
+                                        </div>
+                                        <div class="secondTool">
+                                                    <a  asp-controller="Orders"
+                                               asp-action="AddItemToShoppingCart"
+                                               asp-route-id="@item.Id"  ><img src="~/web/img/icons/fastBack.png"> Купить 1 клик</a>
+                                            @*<a><img src="~/web/img/icons/wishlist.png"> В избранное</a>*@
+                                            <a><img src="~/web/img/icons/inStock.png">В наличие</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="clr"></div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+                <!-- Pagination -->
+                <div class="paginationContent">
+                    <div class="pagination">
+                        <a href="#">&laquo;</a>
+                        <a href="#">1</a>
+                        <a class="active" href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">&raquo;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+@section script{
+         <script>
+             let x = 1;
+                 var p;
+          function text_out(id){
+             
+              $.ajax({
+                    type:"post",
+                        url:"/Orders/AddItemToShoppingCartWithAjax/"+id,
+                    dataType:"json",
+                    success:function(f){
+                     x=f;
+                         alert(x);
+                         p = document.getElementById('text_change');
+                         p.innerHTML = x;
+                    }
+                });
+                
+                     
+      
+
+          }
+         </script>
+}

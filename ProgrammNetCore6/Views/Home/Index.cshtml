@@ -2,7 +2,659 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+ <!-- Slider -->
+      <div class="sliderTop">
+        <a href="#"><img src="~/web/img/slider/cf1f40d0654a03109f3e03454feae139.jpg"></a>
+        <a href="#"><img src="~/web/img/slider/9dd00c5802143a5e5fbca341f18aa2d5.jpg"></a>
+        <a href="#"><img src="~/web/img/slider/cf1f40d0654a03109f3e03454feae139.jpg"></a>
+      </div>
+
+      <!-- Products -->
+      <div class="products">
+        <div class="header_product_category">
+          <div class="category active_category">Новинка</div>
+          <div class="category">Хит продаж</div>
+          <div class="category">Распродажа</div>
+          <div class="category">Рекомендуем</div>
+        </div>
+        <!-- Новинка -->
+        <div class="newProducts tContent">
+          <div class="tabloids">
+            <!-- product -->
+            <div class="itempro">
+              <div class="product_item">
+                <!-- makers -->
+                <div class="newMaker">Новинка</div>
+                <div class="product_table">
+                  <!-- prduct image -->
+                  <div class="product_image">
+                    <a href="#">
+                      <img src="~/web/img/products/aff956c73141b24223aa3768f6b2eac1.jpg">
+                    </a>
+                    <span class="getFastView">Быстрый просмотр</span>
+                  </div>
+                  <div class="product_text">
+                    <a href="#" class="name">
+                      <span class="middle ">Ноутбук Notebook Foxcon Silver Intel Quad Core J4115</span>
+                    </a>
+                    <div class="price measure priceCart"><span>30 719 сом / шт</span></div>
+                    <div class="addCartContainerItem">
+                      <div class="addCartContainerItemLeft">
+                        <div class="addCartHover">
+                          <img src="img/icons/addCart.svg"> В корзину
+                        </div>
+                      </div>
+                      <div class="addCartContainerItemRight">
+                          <input type="number" value="1" maxlength="9999">
+                          <span class="catalogMinus">-</span>
+                          <span class="catalogPlus">+</span>
+                      </div>
+                    </div>
+                    <a href="#" class="aboutProductMobile">Подробнее</a>
+                  </div>
+                </div>
+
+                <div class="clr"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Pagination -->
+          <div class="paginationContent">
+            <div class="pagination">
+              <a href="#">&laquo;</a>
+              <a href="#">1</a>
+              <a class="active" href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">&raquo;</a>
+            </div>
+          </div>
+        </div>
+        <!-- Хит продаж -->
+        <div class="hotProduct tContent">
+          <div class="tabloids">
+            <!-- product -->
+            <div class="product_item">
+              <!-- makers -->
+              <div class="hotMaker">Хит продаж</div>
+              <div class="product_table">
+                <!-- prduct image -->
+                <div class="product_image">
+                  <a href="#">
+                    <img src="~/web/img/products/aff956c73141b24223aa3768f6b2eac1.jpg">
+                  </a>
+                  <span class="getFastView">Быстрый просмотр</span>
+                </div>
+                <div class="product_text">
+                  <a href="#">
+                    <span class="middle">Ноутбук Notebook Foxcon Silver Intel Quad Core J4115</span>
+                  </a>
+                  <div class="price measure priceCart"><span>30 719 сом / шт</span>
+                    <div class="hoverProduct">
+                      <div class="favoriteIcon"><i class="far fa-heart" style="font-size: 16px;"></i></div>
+                      <div class="addCartHover"><i class="fas fa-cart-plus"></i></div>
+                    </div>
+                  </div>
+                  <a href="#" class="aboutProductMobile">Подробнее</a>
+                </div>
+              </div>
+              <!-- Modal for FastView -->
+              <div class="modalForProdcut">
+                <div class="modalFastView">
+                  <div class="fastViewHeader">Быстрый просмотр <span>&times;</span></div>
+                  <div class="contentFastView">
+                    <!-- slideer product for fastview -->
+                    <div class="slideProduct">
+                      <span class="newProductMaker">Новинки</span>
+                      <div class="fotorama" data-nav="thumbs" data-click="false" data-swipe="false" data-width="300"
+                        data-thumbwidth="50px" data-thumbheight="50px" name="navdir" data-allowfullscreen="native">
+                        <img src="~/web/img/products/aff956c73141b24223aa3768f6b2eac1.jpg">
+                        <img src="~/web/img/products/5dd64188c6f97cb78cf1cc6608527b3e.jpg">
+                        <img src="~/web/img/products/162149794063235_full.png" alt="">
+                        <img src="~/web/img/products/162149794069394_full.png" alt="">
+                      </div>
+                    </div>
+                    <!-- description product -->
+                    <div class="descFastView">
+                      <div class="descFastViewHeading">
+                        <a href="#">
+                          <span class="titleProduct">Ноутбук Notebook Foxcon Silver Intel Quad Core N3450 (up to
+                            2.20Ghz), 8GB, 500GB, Intel HD Graphics, 14" IPS FULL HD (1920x1080), WiFi, BT, HD WebCam,
+                            UltraSlim, Eng-Rus (ьитые пиксели)</span>
+                        </a>
+                      </div>
+                      <div class="changeProperties">
+                        <div class="propertiesFastViewProduct">
+                          <div class="propertiesFastViewProductHeading">Характеристики</div>
+                          <div class="propertyList">
+                            <div class="propertyTable">
+                              <div class="propertyName">Наши предложение</div>
+                              <div class="propertyValue">Новинки</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Bluetooth</div>
+                              <div class="propertyValue">Да</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Web-камера </div>
+                              <div class="propertyValue">Да</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">WIFI</div>
+                              <div class="propertyValue">Да</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Бренд</div>
+                              <div class="propertyValue">Foxcon</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Диагональ</div>
+                              <div class="propertyValue">14</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Объём накопителя ГБ</div>
+                              <div class="propertyValue">500</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Оперативной памяти, ГБ </div>
+                              <div class="propertyValue">8</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Процессор</div>
+                              <div class="propertyValue">Intel Quad Core N3450</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Разрешение экрана </div>
+                              <div class="propertyValue">1920 x 1080</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Цвет </div>
+                              <div class="propertyValue">Серебристый</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Чипсет видеоадаптера</div>
+                              <div class="propertyValue">Intel HD Graphics</div>
+                            </div>
+                          </div>
+                          <a href="#" class="link_footer">Больше информации о товаре</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- right -->
+                    <div class="infoFastView">
+                      <span class="price measure">30 719 сом / шт</span>
+                      <div class="addCartContainer">
+                        <div class="btnAddCart"><img src="img/icons/addCart.svg"> В корзину</div>
+                        <div class="cartCounter">
+                          <input type="number" value="1" maxlength="9999">
+                          <span class="catalogMinus">-</span>
+                          <span class="catalogPlus">+</span>
+                        </div>
+                      </div>
+                      <div class="secondTool">
+                        <a href="#"><img src="~/web/img/icons/fastBack.png"> Купить 1 клик</a>
+                        <a><img src="~/web/img/icons/wishlist.png"> В избранное</a>
+                        <a><img src="~/web/img/icons/inStock.png">В наличие</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="clr"></div>
+            </div>
+          </div>
+          <!-- Pagination -->
+          <div class="paginationContent">
+            <div class="pagination">
+              <a href="#">&laquo;</a>
+              <a href="#">1</a>
+              <a class="active" href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">&raquo;</a>
+            </div>
+          </div>
+
+        </div>
+        <!-- Распродажа -->
+        <div class="saleProducts tContent">
+          <div class="tabloids">
+            <!-- product -->
+            <div class="product_item">
+              <!-- makers -->
+              <div class="saleMaker">Распродажа</div>
+              <div class="product_table">
+                <!-- prduct image -->
+                <div class="product_image">
+                  <a href="#">
+                    <img src="~/web/img/products/aff956c73141b24223aa3768f6b2eac1.jpg">
+                  </a>
+                  <span class="getFastView">Быстрый просмотр</span>
+                </div>
+                <div class="product_text">
+                  <a href="#">
+                    <span class="middle">Ноутбук Notebook Foxcon Silver Intel Quad Core J4115</span>
+                  </a>
+                  <div class="price measure priceCart"><span>30 719 сом / шт</span>
+                    <div class="hoverProduct">
+                      <div class="favoriteIcon"><i class="far fa-heart" style="font-size: 16px;"></i></div>
+                      <div class="addCartHover"><i class="fas fa-cart-plus"></i></div>
+                    </div>
+                  </div>
+                  <a href="#" class="aboutProductMobile">Подробнее</a>
+                </div>
+              </div>
+              <!-- Modal for FastView -->
+              <div class="modalForProdcut">
+                <div class="modalFastView">
+                  <div class="fastViewHeader">Быстрый просмотр <span>&times;</span></div>
+                  <div class="contentFastView">
+                    <!-- slideer product for fastview -->
+                    <div class="slideProduct">
+                      <span class="newProductMaker">Новинки</span>
+                      <div class="fotorama" data-nav="thumbs" data-click="false" data-swipe="false" data-width="300"
+                        data-thumbwidth="50px" data-thumbheight="50px" name="navdir" data-allowfullscreen="native">
+                        <img src="~/web/img/products/aff956c73141b24223aa3768f6b2eac1.jpg">
+                        <img src="~/web/img/products/5dd64188c6f97cb78cf1cc6608527b3e.jpg">
+                        <img src="~/web/img/products/162149794063235_full.png" alt="">
+                        <img src="~/web/img/products/162149794069394_full.png" alt="">
+                      </div>
+                    </div>
+                    <!-- description product -->
+                    <div class="descFastView">
+                      <div class="descFastViewHeading">
+                        <a href="#">
+                          <span class="titleProduct">Ноутбук Notebook Foxcon Silver Intel Quad Core N3450 (up to
+                            2.20Ghz), 8GB, 500GB, Intel HD Graphics, 14" IPS FULL HD (1920x1080), WiFi, BT, HD WebCam,
+                            UltraSlim, Eng-Rus (ьитые пиксели)</span>
+                        </a>
+                      </div>
+                      <div class="changeProperties">
+                        <div class="propertiesFastViewProduct">
+                          <div class="propertiesFastViewProductHeading">Характеристики</div>
+                          <div class="propertyList">
+                            <div class="propertyTable">
+                              <div class="propertyName">Наши предложение</div>
+                              <div class="propertyValue">Новинки</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Bluetooth</div>
+                              <div class="propertyValue">Да</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Web-камера </div>
+                              <div class="propertyValue">Да</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">WIFI</div>
+                              <div class="propertyValue">Да</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Бренд</div>
+                              <div class="propertyValue">Foxcon</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Диагональ</div>
+                              <div class="propertyValue">14</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Объём накопителя ГБ</div>
+                              <div class="propertyValue">500</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Оперативной памяти, ГБ </div>
+                              <div class="propertyValue">8</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Процессор</div>
+                              <div class="propertyValue">Intel Quad Core N3450</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Разрешение экрана </div>
+                              <div class="propertyValue">1920 x 1080</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Цвет </div>
+                              <div class="propertyValue">Серебристый</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Чипсет видеоадаптера</div>
+                              <div class="propertyValue">Intel HD Graphics</div>
+                            </div>
+                          </div>
+                          <a href="#" class="link_footer">Больше информации о товаре</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- right -->
+                    <div class="infoFastView">
+                      <span class="price measure">30 719 сом / шт</span>
+                      <div class="addCartContainer">
+                        <div class="btnAddCart"><img src="img/icons/addCart.svg"> В корзину</div>
+                        <div class="cartCounter">
+                          <input type="number" value="1" maxlength="9999">
+                          <span class="catalogMinus">-</span>
+                          <span class="catalogPlus">+</span>
+                        </div>
+                      </div>
+                      <div class="secondTool">
+                        <a href="#"><img src="~/web/img/icons/fastBack.png"> Купить 1 клик</a>
+                        <a><img src="~/web/img/icons/wishlist.png"> В избранное</a>
+                        <a><img src="~/web/img/icons/inStock.png">В наличие</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="clr"></div>
+            </div>
+          </div>
+          <!-- Pagination -->
+          <div class="paginationContent">
+            <div class="pagination">
+              <a href="#">&laquo;</a>
+              <a href="#">1</a>
+              <a class="active" href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">&raquo;</a>
+            </div>
+          </div>
+
+        </div>
+        <!-- Рекомендуем -->
+        <div class="recomendedProducts tContent">
+          <div class="tabloids">
+            <!-- product -->
+            <div class="product_item">
+              <!-- makers -->
+              <div class="recoMaker">Рекомендуем</div>
+              <div class="product_table">
+                <!-- prduct image -->
+                <div class="product_image">
+                  <a href="#">
+                    <img src="~/web/img/products/aff956c73141b24223aa3768f6b2eac1.jpg">
+                  </a>
+                  <span class="getFastView">Быстрый просмотр</span>
+                </div>
+                <div class="product_text">
+                  <a href="#">
+                    <span class="middle">Ноутбук Notebook Foxcon Silver Intel Quad Core J4115</span>
+                  </a>
+                  <div class="price measure priceCart"><span>30 719 сом / шт</span></div>
+                  <div class="addCartContainerItem">
+                    <div class="addCartContainerItemLeft">
+                      counter
+                    </div>
+                    <div class="addCartContainerItemRight">
+                      <button>Add</button>
+                    </div>
+                  </div>
+                  <a href="#" class="aboutProductMobile">Подробнее</a>
+                </div>
+              </div>
+              <!-- Modal for FastView -->
+              <div class="modalForProdcut">
+                <div class="modalFastView">
+                  <div class="fastViewHeader">Быстрый просмотр <span>&times;</span></div>
+                  <div class="contentFastView">
+                    <!-- slideer product for fastview -->
+                    <div class="slideProduct">
+                      <span class="newProductMaker">Новинки</span>
+                      <div class="fotorama" data-nav="thumbs" data-click="false" data-swipe="false" data-width="300"
+                        data-thumbwidth="50px" data-thumbheight="50px" name="navdir" data-allowfullscreen="native">
+                        <img src="~/web/img/products/aff956c73141b24223aa3768f6b2eac1.jpg">
+                        <img src="~/web/img/products/5dd64188c6f97cb78cf1cc6608527b3e.jpg">
+                        <img src="~/web/img/products/162149794063235_full.png" alt="">
+                        <img src="~/web/img/products/162149794069394_full.png" alt="">
+                      </div>
+                    </div>
+                    <!-- description product -->
+                    <div class="descFastView">
+                      <div class="descFastViewHeading">
+                        <a href="#">
+                          <span class="titleProduct">Ноутбук Notebook Foxcon Silver Intel Quad Core N3450 (up to
+                            2.20Ghz), 8GB, 500GB, Intel HD Graphics, 14" IPS FULL HD (1920x1080), WiFi, BT, HD WebCam,
+                            UltraSlim, Eng-Rus (ьитые пиксели)</span>
+                        </a>
+                      </div>
+                      <div class="changeProperties">
+                        <div class="propertiesFastViewProduct">
+                          <div class="propertiesFastViewProductHeading">Характеристики</div>
+                          <div class="propertyList">
+                            <div class="propertyTable">
+                              <div class="propertyName">Наши предложение</div>
+                              <div class="propertyValue">Новинки</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Bluetooth</div>
+                              <div class="propertyValue">Да</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Web-камера </div>
+                              <div class="propertyValue">Да</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">WIFI</div>
+                              <div class="propertyValue">Да</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Бренд</div>
+                              <div class="propertyValue">Foxcon</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Диагональ</div>
+                              <div class="propertyValue">14</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Объём накопителя ГБ</div>
+                              <div class="propertyValue">500</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Оперативной памяти, ГБ </div>
+                              <div class="propertyValue">8</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Процессор</div>
+                              <div class="propertyValue">Intel Quad Core N3450</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Разрешение экрана </div>
+                              <div class="propertyValue">1920 x 1080</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Цвет </div>
+                              <div class="propertyValue">Серебристый</div>
+                            </div>
+                            <div class="propertyTable">
+                              <div class="propertyName">Чипсет видеоадаптера</div>
+                              <div class="propertyValue">Intel HD Graphics</div>
+                            </div>
+                          </div>
+                          <a href="#" class="link_footer">Больше информации о товаре</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- right -->
+                    <div class="infoFastView">
+                      <span class="price measure">30 719 сом / шт</span>
+                      <div class="addCartContainer">
+                        <div class="btnAddCart"><img src="~/web/img/icons/addCart.svg"> В корзину</div>
+                        <div class="cartCounter">
+                          <input type="number" value="1" maxlength="9999">
+                          <span class="catalogMinus">-</span>
+                          <span class="catalogPlus">+</span>
+                        </div>
+                      </div>
+                      <div class="secondTool">
+                        <a href="#"><img src="~/web/img/icons/fastBack.png"> Купить 1 клик</a>
+                        <a><img src="~/web/img/icons/wishlist.png"> В избранное</a>
+                        <a><img src="~/web/img/icons/inStock.png">В наличие</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="clr"></div>
+            </div>
+          </div>
+          <!-- Pagination -->
+          <div class="paginationContent">
+            <div class="pagination">
+              <a href="#">&laquo;</a>
+              <a href="#">1</a>
+              <a class="active" href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">&raquo;</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- popular product -->
+      <div class="popular">
+        <h3>Популярный товары</h3>
+        <div class="popular-slider">
+          <div class="product_item">
+            <!-- makers -->
+            <div class="newMaker">Новинка</div>
+            <div class="product_table">
+              <!-- prduct image -->
+              <div class="product_image">
+                <a href="#">
+                  <img src="~/web/img/products/aff956c73141b24223aa3768f6b2eac1.jpg">
+                </a>
+              </div>
+              <!-- product text -->
+              <div class="product_text">
+                <a href="#">
+                  <span class="middle">Ноутбук Notebook Foxcon Silver Intel Quad Core J4115</span>
+                </a>
+                <span class="price measure">30 719 сом / шт</span>
+              </div>
+            </div>
+            <div class="clr"></div>
+          </div>
+          <div class="product_item">
+            <!-- makers -->
+            <div class="newMaker">Новинка</div>
+            <div class="product_table">
+              <!-- prduct image -->
+              <div class="product_image">
+                <a href="#">
+                  <img src="img/products/aff956c73141b24223aa3768f6b2eac1.jpg">
+                </a>
+              </div>
+              <!-- product text -->
+              <div class="product_text">
+                <a href="#">
+                  <span class="middle">Ноутбук Notebook Foxcon Silver Intel Quad Core J4115</span>
+                </a>
+                <span class="price measure">30 719 сом / шт</span>
+              </div>
+            </div>
+            <div class="clr"></div>
+          </div>
+          <div class="product_item">
+            <!-- makers -->
+            <div class="newMaker">Новинка</div>
+            <div class="product_table">
+              <!-- prduct image -->
+              <div class="product_image">
+                <a href="#">
+                  <img src="img/products/aff956c73141b24223aa3768f6b2eac1.jpg">
+                </a>
+              </div>
+              <!-- product text -->
+              <div class="product_text">
+                <a href="#">
+                  <span class="middle">Ноутбук Notebook Foxcon Silver Intel Quad Core J4115</span>
+                </a>
+                <span class="price measure">30 719 сом / шт</span>
+              </div>
+            </div>
+            <div class="clr"></div>
+          </div>
+          <div class="product_item">
+            <!-- makers -->
+            <div class="newMaker">Новинка</div>
+            <div class="product_table">
+              <!-- prduct image -->
+              <div class="product_image">
+                <a href="#">
+                  <img src="img/products/aff956c73141b24223aa3768f6b2eac1.jpg">
+                </a>
+              </div>
+              <!-- product text -->
+              <div class="product_text">
+                <a href="#">
+                  <span class="middle">Ноутбук Notebook Foxcon Silver Intel Quad Core J4115</span>
+                </a>
+                <span class="price measure">30 719 сом / шт</span>
+              </div>
+            </div>
+            <div class="clr"></div>
+          </div>
+          <div class="product_item">
+            <!-- makers -->
+            <div class="newMaker">Новинка</div>
+            <div class="product_table">
+              <!-- prduct image -->
+              <div class="product_image">
+                <a href="#">
+                  <img src="~/web/img/products/aff956c73141b24223aa3768f6b2eac1.jpg">
+                </a>
+              </div>
+              <!-- product text -->
+              <div class="product_text">
+                <a href="#">
+                  <span class="middle">Ноутбук Notebook Foxcon Silver Intel Quad Core J4115</span>
+                </a>
+                <span class="price measure">30 719 сом / шт</span>
+              </div>
+            </div>
+            <div class="clr"></div>
+          </div>
+          <div class="product_item">
+            <!-- makers -->
+            <div class="newMaker">Новинка</div>
+            <div class="product_table">
+              <!-- prduct image -->
+              <div class="product_image">
+                <a href="#">
+                  <img src="~/web/img/products/aff956c73141b24223aa3768f6b2eac1.jpg">
+                </a>
+              </div>
+              <!-- product text -->
+              <div class="product_text">
+                <a href="#">
+                  <span class="middle">Ноутбук Notebook Foxcon Silver Intel Quad Core J4115</span>
+                </a>
+                <span class="price measure">30 719 сом / шт</span>
+              </div>
+            </div>
+            <div class="clr"></div>
+          </div>
+          <div class="product_item">
+            <!-- makers -->
+            <div class="newMaker">Новинка</div>
+            <div class="product_table">
+              <!-- prduct image -->
+              <div class="product_image">
+                <a href="#">
+                  <img src="img/products/aff956c73141b24223aa3768f6b2eac1.jpg">
+                </a>
+              </div>
+              <!-- product text -->
+              <div class="product_text">
+                <a href="#">
+                  <span class="middle">Ноутбук Notebook Foxcon Silver Intel Quad Core J4115</span>
+                </a>
+                <span class="price measure">30 719 сом / шт</span>
+              </div>
+            </div>
+            <div class="clr"></div>
+          </div>
+        </div>
+      </div>

@@ -1,0 +1,76 @@
+﻿@using ProgrammNetCore6.Models;
+@inject UserManager<ApplicationUser> UserManager;  
+@{
+    Layout = null;
+}
+
+
+  <!-- Top header -->
+  <div class="top_header">
+    <div class="mobile_menu">
+      <div id="nav-icon4">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <ul class="top_header_menu">
+      <li class="top_header_menu_item"><a href="#" class="current">Главная</a></li>
+      <li class="top_header_menu_item"><a href="#">Контакты</a></li>
+      <li class="top_header_menu_item"><a href="#">Доставка</a></li>
+      <li class="top_header_menu_item"><a href="#">Гарантия</a></li>
+    </ul>
+    <ul class="top_header_right">
+      <li><a class="authBtn">@UserManager.GetUserName(User)</a></li>
+        @if (!User.Identity.IsAuthenticated)
+        {
+                <li><a asp-controller="Account" asp-action="Login" class="authBtn">Вход</a></li>
+                <li><a href="/Account/Register">Регистрация</a></li>
+        }
+        else
+        {
+                <form asp-controller="Account" asp-action="Logout">
+                 <li ><button class="btnFormSubmitReg" >Выход</button></li>
+                 </form>
+        }
+    </ul>
+  </div>
+
+  <!-- Sub header -->
+  <div class="sub_header">
+    <div class="logPhone">
+      <a href="/Home/Index"><img src="~/web/img/logo.png"  width="200" class="logo"></a>
+      <div class="phone">
+        <a href="tel:+996775698745" class="iconCall"><img src="~/web/img/icons/call.png"></a>
+        <div class="phoneNumber">
+          <p><span>0775 698 745</span> </p>
+          <p><span>0775 698 745</span></p>
+          <p><a href="tel:+996775698745">Заказать звонок</a></p>
+        </div>
+      </div>
+
+    </div>
+    <div class="subInputBlock" style="width:550px;">
+      
+        <form asp-controller="Product" class="topSearch" asp-action="ProductSearch" >
+        <input type="text" name="name" placeholder="Поиск по каталогу магазина" id="search1">
+        <button type="submit" class="subBtn"><img src="~/web/img/icons/right.png"></button>
+
+        </form>
+      
+    </div>
+
+    <div class="subTable">
+        @* <div class="wrap">
+        <a href="#" class="icon"><img src="~/web/img/icons/favorites.png"></a>
+        <a href="#" class="text">0</a>
+      </div>*@
+      <div class="cartTable">
+        <a asp-controller="Orders" asp-action="ShoppingCart"  class="iconCart">
+          <img src="~/web/img/icons/cartH2.png">
+         <span id="text_change">@ViewBag.CountProduct</span>
+        </a>
+        <a asp-controller="Orders" asp-action="ShoppingCart"  class="textCart">&nbsp; В корзине пока пуста</a>
+      </div>
+    </div>
+  </div>

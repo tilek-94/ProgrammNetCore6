@@ -12,5 +12,7 @@ namespace ProgrammNetCore6.Models
     {
         [Display(Name ="Full Name")]
         public string? FullName { get; set; }
+        public DateTime DateOfBirth { get; set; } 
+        public string?  Address { get; set; } 
     }
 }

@@ -1,0 +1,36 @@
+﻿@model ClientDto
+   <div class="submitOrder">
+            <div class="titleOrder">ЗАПОЛНИТЕ ПОЖАЛУЙСТА ВАШИ ДАННЫЕ ДЛЯ ЗАКАЗА</div>
+            <form class="orderForm" asp-action="CompleteOrder">
+
+              <div class="orderPerson">
+                <div class="orderBlockLeft">ЛИЧНЫЕ ДАННЫЕ</div>
+                <ul class="orderBlockRight">
+                  <li>
+                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <label for="person_name">Ф.И.О*</label>
+                    <input type="text" name="Name" required>
+                     <span asp-validation-for="Name" class="text-danger"></span>
+                   </li>
+                  <li>
+                    <label for="person_email">Адрес*
+                    </label>
+                    <input type="text" name="Addres" required>
+                     <span asp-validation-for="Addres" class="text-danger"></span>
+
+                  </li>
+                  <li>
+                    <label for="person_phone">Телефон*</label>
+                    <input type="number" name="Phone" required>
+                     <span asp-validation-for="Phone" class="text-danger"></span>
+
+                  </li>
+                </ul>
+              </div>
+              <div  class="orderLineBottom">
+              <button class="btnAddCart" type="submit">  <img src="~/web/img/icons/order.png"> Оформить заказ</button>
+            @* <p>К оплате: <strong>@Model.ShoppingCartTotal сом</strong></p>*@
+              </div>
+            </form>
+          </div>
+

@@ -11,5 +11,6 @@ namespace ProgrammNetCore6.Data.AbstractService
     public interface IProductService : IEntityBaseRepository<Products>
     {
         Task<IEnumerable<Products>> GetListProductByCategoryId(int id);
+        Task<IEnumerable<Products>> GetListProductBySerarch(string name);
     }
 }

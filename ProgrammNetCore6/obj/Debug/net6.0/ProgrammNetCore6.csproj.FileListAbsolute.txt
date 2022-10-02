@@ -266,3 +266,4 @@ D:\c#\ASP.NET Core\Практика\ProgrammNetCore6\ProgrammNetCore6\bin\Debug\
 D:\c#\ASP.NET Core\Практика\ProgrammNetCore6\ProgrammNetCore6\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 D:\c#\ASP.NET Core\Практика\ProgrammNetCore6\ProgrammNetCore6\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\c#\ASP.NET Core\Практика\ProgrammNetCore6\ProgrammNetCore6\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\c#\ASP.NET Core\Практика\ProgrammNetCore6\ProgrammNetCore6\bin\Debug\net6.0\FluentValidation.dll

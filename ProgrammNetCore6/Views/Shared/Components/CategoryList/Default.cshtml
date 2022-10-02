@@ -1,0 +1,37 @@
+﻿@using ProgrammNetCore6.Models
+@model IEnumerable<Category>
+@{
+    Layout = null;
+}
+
+<!-- Left block -->
+    <div class="leftColumn">
+      <div class="catalog">
+        <span class="catalogTitle">Каталог товаров <img src="~/web/img/icons/catalogMenu.png"></span>
+        <div class="catalogMenuContent">
+          <ul class="catalogMenuLists">
+                @foreach (var item in Model.Where(x => x.CategoryId == 0))
+                {
+                        <li class="menu_exists_btn">
+                        @if (@Model.FirstOrDefault(x => x.CategoryId == item.Id) == null)
+                        {
+                                    <a href="/Product/Index"><img style="width:20px; float:left; margin-right:8px;"  src="~/Image/CategoryIcon/@item.Icon"> @item.Name</a>
+                        }
+                        else
+                        {
+                                    <a href="#"><img style="width:20px; float:left; margin-right:8px;" src="~/Image/CategoryIcon/@item.Icon"> @item.Name</a>
+                        }
+                            <ul class="catalogDrop">
+                            @foreach (var podCategory in Model.Where(x => x.CategoryId == item.Id))
+                            {
+                        <li><a href="/Product/Index/@podCategory.Id">@podCategory.Name</a></li>
+                            }
+
+                  </ul>
+                </li>
+                }
+
+          </ul>
+        </div>
+      </div>
+    </div>

@@ -19,7 +19,7 @@ namespace ProgrammNetCore6.Data.Cart
         }
         public static ShoppingCart GetShoppingCart(IServiceProvider services)
         {
-            ISession session = services.GetRequiredService<IHttpContextAccessor>()?.HttpContext.Session;
+            ISession session = services.GetRequiredService<IHttpContextAccessor>().HttpContext.Session;
             var context = services.GetService<AppDbContext>();
 
             string cartId = session.GetString("CartId") ?? Guid.NewGuid().ToString();
@@ -47,6 +47,8 @@ namespace ProgrammNetCore6.Data.Cart
                 shoppingCartItem.Amount++;
             }
             _context.SaveChanges();
+           
+           
         }
         public List<ShoppingCartItem> GetShoppingCartItems()
         {
@@ -54,7 +56,8 @@ namespace ProgrammNetCore6.Data.Cart
         }
 
         public double GetShoppingCartTotal() => _context.ShoppingCartItems.Where(n => n.ShoppingCartId == ShoppingCartId).Select(n => n.Products.Price * n.Amount).Sum();
-
+        public async Task<int> GetShoppingCartCountAsync() => await _context.ShoppingCartItems.Where(n => n.ShoppingCartId == ShoppingCartId).SumAsync(n => n.Amount);
+        public int GetShoppingCartCount() =>  _context.ShoppingCartItems.Where(n => n.ShoppingCartId == ShoppingCartId).Sum(n => n.Amount);
         public async Task ClearShoppingCartAsync()
         {
             var items = await _context.ShoppingCartItems.Where(n => n.ShoppingCartId == ShoppingCartId).ToListAsync();

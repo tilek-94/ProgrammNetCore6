@@ -1,0 +1,115 @@
+﻿@model ShopingCartDto
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="category">
+    <div class="breadcrumbs">
+        <ul>
+            <li><a href="#">Главная</a></li>
+
+            <li><a>Корзина</a></li>
+
+
+        </ul>
+    </div>
+    <h1 class="productTitleInfo">Корзина</h1>
+    <!-- Cart -->
+    @if (Model.ShoppingCart.ShoppingCartItems.Count > 0)
+    {
+            <div class="cartContent">
+                <div class="tabloidCart">
+                    <!-- product -->
+                @foreach (var item in Model.ShoppingCart.ShoppingCartItems)
+                {
+                            <div class="product_item">
+                                <div class="topSection">
+                                    <span class="inStock"><img src="~/web/img/icons/inStock.png">В наличие</span>
+                                    <!-- delete cart item -->
+                                    <div class="closeCartItem">&times;</div>
+                                </div>
+                                <div class="product_table">
+                                    <!-- prduct image -->
+                                    <div class="product_image">
+                                        <a asp-controller="Product" asp-action="ContentProduct" asp-route-id="@item.Products.Id">
+                                            <img src="~/Image/Product/Smaalimg/@item.Products.Img">
+                                        </a>
+                                    </div>
+                                    <div class="product_text">
+                                        <div>
+                                            <a asp-controller="Product" asp-action="ContentProduct" asp-route-id="@item.Products.Id">
+                                                <span class="middle">@item.Products.Name</span>
+                                            </a>
+                                            <span class="price measure">@item.Products.Price сом / шт</span>
+                                        </div>
+                                        <div class="counterCart">
+                                            <span>Кол-во:</span>
+                                            <div>
+                                                <a asp-controller="Orders" asp-action="RemoveItemFromShoppingCart"
+                                   asp-route-id="@item.Products.Id">-</a>
+                                                <input type="number" value="@item.Amount">
+                                                <a asp-controller="Orders" asp-action="AddItemToShoppingCart"
+                                   asp-route-id="@item.Products.Id">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="counterCart">
+                                            <span>@(item.Amount * item.Products.Price) Сом</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="clr"></div>
+                            </div>
+                }
+                </div>
+                <div class="totalCart">
+                    <p><span>Всего товаров:</span> <strong>@Model.ShoppingCart.ShoppingCartItems.Sum(x=>x.Amount)</strong> </p>
+                    <p><span>Сумма:</span> <strong> @Model.ShoppingCartTotal сом</strong> </p>
+                </div>
+            @if (!User.Identity.IsAuthenticated)
+            {
+                @await Html.PartialAsync("~/Views/Orders/RegisterClient.cshtml", new ClientDto());
+            }
+            else
+            {
+                        <div class="submitOrder">
+                            <div class="orderLineBottom">
+                                <a asp-controller="Orders" asp-action="CompleteOrder"><img src="~/web/img/icons/order.png"> Оформить заказ</a>
+                                <p>К оплате: <strong>@Model.ShoppingCartTotal сом</strong></p>
+                            </div>
+                        </div>
+            }
+
+            </div>
+    }
+    else
+    {
+
+
+            <!-- В корзине пока пуста -->
+            <div class="empty">
+                <div class="emptyWrapper">
+                    <div class="pictureContainer"><img src="~/web/img/icons/emptyFolder.png"></div>
+                    <div class="info">
+                        <h3>В КОРЗИНЕ ПОКА ПУСТО</h3>
+                        <p>
+                            Воспользуйтесь поиском или <a href="catalog.html">каталогом</a> , выберите нужные товары и добавьте их в корзину.
+                        </p>
+                        <a href="index.html">Главная страница</a>
+                    </div>
+                </div>
+                <h2 class="emptyTitle m-2">ИЛИ ВЫБЕРИТЕ НУЖНЫЙ ТОВАР В КАТАЛОГЕ.</h2>
+                <ul class="emptyMenu">
+                    <li><a href="#">Ноутбуки, планшеты и компьютеры</a></li>
+                    <li><a href="#">Сотовые телефоны и связь</a></li>
+                    <li><a href="#">Бытовая техника</a></li>
+                    <li><a href="#">Телевизоры</a></li>
+                    <li><a href="#">Видеонаблюдение и СКУД системы</a></li>
+                    <li><a href="#">Фото/видео/аудио техника</a></li>
+                    <li><a href="#">Гаджеты и акссессуары</a></li>
+                </ul>
+            </div>
+    }
+</div>
